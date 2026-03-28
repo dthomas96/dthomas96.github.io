@@ -31,20 +31,36 @@
       margin: 8px 0;
     }
 
-    ul {
-      padding-left: 18px;
-    }
-
     a {
       color: #fff;
       text-decoration: underline;
+    }
+
+    .work-item {
+      margin-bottom: 30px;
+    }
+
+    .work-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .work-sub {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    video {
+      margin-bottom: 10px;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Header with profile image -->
+  <!-- Header -->
   <div style="display: flex; align-items: center; gap: 20px;">
 
     <img src="images/rack.jpeg" alt="Dylan Thomas"
@@ -63,32 +79,53 @@
     communicate ideas clearly, and produce content that resonates.
   </p>
 
+  <!-- Selected Work -->
   <div class="section">
     <h2>Selected Work</h2>
-    <ul>
-      <li>Political campaign reel – shot in person, edited, 1.5M+ views on Facebook</li>
+
+    <div class="work-item">
+      <div class="work-title">Political campaign reel</div>
+      <div class="work-sub">Shot in person, edited, 1.5M+ views on Facebook</div>
       <video width="100%" controls>
-    <source src="videos/stuart_bonds.mp4" type="video/mp4">
+        <source src="videos/stuart_bonds.mp4" type="video/mp4">
       </video>
-              <li>Daylight Computer – short-form content focused on tech and health topics</li>
-            <video width="100%" controls style="margin-bottom: 20px;">
-    <source src="videos/daylight_interviews.mp4" type="video/mp4">
-  </video>
-      <li>Tristan Scott – health and tech content reaching tens to hundreds of thousands of views</li>
-        <video width="100%" controls>
-    <source src="videos/tristan_scott.mp4" type="video/mp4">
-  </video>
-      <li>Statecraft Systems LLC – long-form video editing and structured content</li>
-      <video width="100%" controls style="margin-bottom: 20px;">
-    <source src="videos/minuteman.mp4" type="video/mp4">
-  </video>
-      <li>Johanniter – long-form content production</li>
-              <video width="100%" controls>
-    <source src="videos/Johanniter.mp4" type="video/mp4">
-  </video>
-    </ul>
+    </div>
+
+    <div class="work-item">
+      <div class="work-title">Daylight Computer</div>
+      <div class="work-sub">Short-form content focused on tech and health topics</div>
+      <video width="100%" controls>
+        <source src="videos/daylight_interviews.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="work-item">
+      <div class="work-title">Tristan Scott</div>
+      <div class="work-sub">Health and tech content reaching tens to hundreds of thousands of views</div>
+      <video width="100%" controls>
+        <source src="videos/tristan_scott.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="work-item">
+      <div class="work-title">Statecraft Systems LLC</div>
+      <div class="work-sub">Long-form video editing and structured content</div>
+      <video width="100%" controls>
+        <source src="videos/minuteman.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="work-item">
+      <div class="work-title">Johanniter</div>
+      <div class="work-sub">Long-form content production</div>
+      <video width="100%" controls>
+        <source src="videos/johanniter.mp4" type="video/mp4">
+      </video>
+    </div>
+
   </div>
 
+  <!-- What I Do -->
   <div class="section">
     <h2>What I Do</h2>
     <ul>
@@ -100,11 +137,13 @@
     </ul>
   </div>
 
+  <!-- Showreel -->
   <div class="section">
     <h2>Showreel</h2>
     <p>Add your showreel here (YouTube or Vimeo embed)</p>
   </div>
 
+  <!-- Contact -->
   <div class="section">
     <h2>Contact</h2>
     <p>
