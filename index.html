@@ -9,27 +9,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
 
   <!-- particles.js -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.6;
-      color: #fff;
-      background: #000;
-      margin: 0;
-    }
-
-    /* Particle background layer */
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-
+ <script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 70 }, // more nodes
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: {
+        value: 0.5, // stronger visibility
+        random: false
+      },
+      size: {
+        value: 4, // bigger nodes
+        random: true
+      },
+      line_linked: {
+        enable: true,
+        distance: 160, // longer connections
+        color: "#ffffff",
+        opacity: 0.35, // much more visible lines
+        width: 1.2
+      },
+      move: {
+        enable: true,
+        speed: 0.8, // slightly faster
+        direction: "none",
+        out_mode: "out"
+      }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: false },
+        onclick: { enable: false }
+      }
+    },
+    retina_detect: true
+  });
+</script>
     .page {
       max-width: 720px;
       margin: 60px auto;
