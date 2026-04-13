@@ -9,6 +9,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       max-width: 720px;
@@ -16,7 +28,9 @@
       line-height: 1.6;
       padding: 0 20px;
       color: #fff;
-      background-color: #000;
+      background: linear-gradient(270deg, #000000, #050505, #0a0a0a);
+      background-size: 600% 600%;
+      animation: gradientShift 40s ease infinite;
     }
 
     /* Bold sans-serif headings */
@@ -62,7 +76,7 @@
       font-size: 14px;
       color: #aaa;
       margin-bottom: 10px;
-      text-transform: none; /* keep descriptions normal */
+      text-transform: none;
     }
 
     video {
