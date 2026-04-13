@@ -5,44 +5,29 @@
   <title>Dylan Thomas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
 
+  <!-- particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
   <style>
-    @keyframes gradientShift {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    html, body {
-      min-height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.6;
       color: #fff;
-      background-color: #000;
-      position: relative;
-      overflow-x: hidden;
+      background: #000;
+      margin: 0;
     }
 
-    body::before {
-      content: "";
+    /* Particle background layer */
+    #particles-js {
       position: fixed;
-      inset: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
       z-index: -1;
-      background: linear-gradient(270deg, #000000, #1a1a1a, #2a2a2a, #111111, #000000);
-      background-size: 400% 400%;
-      animation: gradientShift 18s ease infinite;
     }
 
     .page {
@@ -61,7 +46,6 @@
     h1 {
       font-size: 34px;
       margin-bottom: 5px;
-      letter-spacing: -1.8px;
     }
 
     h2 {
@@ -105,6 +89,10 @@
 </head>
 
 <body>
+
+  <!-- Particle background -->
+  <div id="particles-js"></div>
+
   <div class="page">
 
     <div style="display: flex; align-items: center; gap: 20px;">
@@ -142,48 +130,57 @@
 
       <div class="work-item">
         <div class="work-title">Johanniter</div>
-        <div class="work-sub">Long-form instructional videos for emergency workers. These videos were produced in German and required working with a team in a different language.</div>
+        <div class="work-sub">Long-form instructional videos for emergency workers.</div>
         <video controls>
           <source src="videos/johanniter.mp4" type="video/mp4">
         </video>
       </div>
 
-      <div class="work-item">
-        <div class="work-title">Daylight Computer</div>
-        <div class="work-sub">Short-form content focused on tech and health topics, promoting the Daylight Computer.</div>
-        <video controls>
-          <source src="videos/daylight_interviews.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <div class="work-item">
-        <div class="work-title">Tristan Scott</div>
-        <div class="work-sub">Viral influencer content reaching hundreds of thousands of views.</div>
-        <video controls>
-          <source src="videos/tristan_scott.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <div class="work-item">
-        <div class="work-title">Political campaign reels</div>
-        <div class="work-sub">Shot in person, edited, 1.5M+ views on Facebook.</div>
-        <video controls>
-          <source src="videos/stuart_bonds.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>What I Do</h2>
-      <ul>
-        <li>Create high-retention short-form and long-form videos</li>
-        <li>Write scripts with strong hooks that keep viewers watching until the end</li>
-        <li>Use visual storytelling, engaging subtitles and b-roll to reinforce key ideas</li>
-        <li>Colour grade video and turn raw footage into a consistent style</li>
-        <li>Select fonts, colours and positioning to create recognisable branding</li>
-      </ul>
     </div>
 
   </div>
+
+  <!-- Particle config -->
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 40 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: {
+          value: 0.2,
+          random: true
+        },
+        size: {
+          value: 2,
+          random: true
+        },
+        line_linked: {
+          enable: true,
+          distance: 120,
+          color: "#ffffff",
+          opacity: 0.15,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 0.6,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: false },
+          onclick: { enable: false }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+
 </body>
 </html>
