@@ -5,7 +5,6 @@
   <title>Dylan Thomas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Sans-serif heading font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -21,19 +20,37 @@
       }
     }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      max-width: 720px;
-      margin: 60px auto;
-      line-height: 1.6;
-      padding: 0 20px;
-      color: #fff;
-      background: linear-gradient(270deg, #000000, #050505, #0a0a0a);
-      background-size: 600% 600%;
-      animation: gradientShift 40s ease infinite;
+    html, body {
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Bold sans-serif headings */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #fff;
+      background-color: #000;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(270deg, #000000, #111111, #1a1a1a, #0d0d0d, #000000);
+      background-size: 400% 400%;
+      animation: gradientShift 18s ease infinite;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
     h1, h2, .work-title {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       font-weight: 700;
@@ -80,94 +97,93 @@
     }
 
     video {
+      width: 100%;
       margin-bottom: 10px;
+      display: block;
     }
   </style>
 </head>
 
 <body>
+  <div class="page">
 
-  <!-- Header -->
-  <div style="display: flex; align-items: center; gap: 20px;">
-    <div>
-      <h1 style="margin: 0;">Dylan Thomas</h1>
-      <p style="margin: 0;">Video Editor • Social Media Marketer • Content Creator</p>
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <div>
+        <h1 style="margin: 0;">Dylan Thomas</h1>
+        <p style="margin: 0;">Video Editor • Social Media Marketer • Content Creator</p>
+      </div>
     </div>
-  </div>
 
-  <p>
-    I create engaging, high-performing content designed to hold attention and generate views.
-    My background in Politics, Philosophy and Economics informs how I structure narratives,
-    communicate ideas clearly, and produce content that resonates.
-  </p>
-
-  <!-- Contact -->
-  <div class="section">
-    <h2>Contact:</h2>
     <p>
-      <a href="mailto:dylanthomas2696@gmail.com">
-        dylanthomas2696@gmail.com
-      </a>
+      I create engaging, high-performing content designed to hold attention and generate views.
+      My background in Politics, Philosophy and Economics informs how I structure narratives,
+      communicate ideas clearly, and produce content that resonates.
     </p>
+
+    <div class="section">
+      <h2>Contact:</h2>
+      <p>
+        <a href="mailto:dylanthomas2696@gmail.com">
+          dylanthomas2696@gmail.com
+        </a>
+      </p>
+    </div>
+
+    <div class="section">
+      <h1>Selected Work:</h1>
+
+      <div class="work-item">
+        <div class="work-title">Statecraft Systems LLC</div>
+        <div class="work-sub">Long-form promotional videos for self-development conferances.</div>
+        <video controls>
+          <source src="videos/minuteman.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="work-item">
+        <div class="work-title">Johanniter</div>
+        <div class="work-sub">Long-form instructional videos for emergency workers. These videos were produced in German and required working with a team in a different language.</div>
+        <video controls>
+          <source src="videos/johanniter.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="work-item">
+        <div class="work-title">Daylight Computer</div>
+        <div class="work-sub">Short-form content focused on tech and health topics, promoting the Daylight Computer.</div>
+        <video controls>
+          <source src="videos/daylight_interviews.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="work-item">
+        <div class="work-title">Tristan Scott</div>
+        <div class="work-sub">Viral influencer content reaching hundreds of thousands of views.</div>
+        <video controls>
+          <source src="videos/tristan_scott.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="work-item">
+        <div class="work-title">Political campaign reels</div>
+        <div class="work-sub">Shot in person, edited, 1.5M+ views on Facebook.</div>
+        <video controls>
+          <source src="videos/stuart_bonds.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>What I Do</h2>
+      <ul>
+        <li>Create high-retention short-form and long-form videos</li>
+        <li>Write scripts with strong hooks that keep viewers watching until the end</li>
+        <li>Use visual storytelling, engaging subtitles and b-roll to reinforce key ideas</li>
+        <li>Colour grade video and turn raw footage into a consistent style</li>
+        <li>Select fonts, colours and positioning to create recognisable branding</li>
+      </ul>
+    </div>
+
   </div>
-
-  <!-- Selected Work -->
-  <div class="section">
-    <h1>Selected Work:</h1>
-
-    <div class="work-item">
-      <div class="work-title">Statecraft Systems LLC</div>
-      <div class="work-sub">Long-form promotional videos for self-development conferances.</div>
-      <video width="100%" controls>
-        <source src="videos/minuteman.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="work-item">
-      <div class="work-title">Johanniter</div>
-      <div class="work-sub">Long-form instructional videos for emergency workers. These videos were produced in German and required working with a team in a different language.</div>
-      <video width="100%" controls>
-        <source src="videos/johanniter.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="work-item">
-      <div class="work-title">Daylight Computer</div>
-      <div class="work-sub">Short-form content focused on tech and health topics, promoting the Daylight Computer.</div>
-      <video width="100%" controls>
-        <source src="videos/daylight_interviews.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="work-item">
-      <div class="work-title">Tristan Scott</div>
-      <div class="work-sub">Viral influencer content reaching hundreds of thousands of views.</div>
-      <video width="100%" controls>
-        <source src="videos/tristan_scott.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="work-item">
-      <div class="work-title">Political campaign reels</div>
-      <div class="work-sub">Shot in person, edited, 1.5M+ views on Facebook.</div>
-      <video width="100%" controls>
-        <source src="videos/stuart_bonds.mp4" type="video/mp4">
-      </video>
-    </div>
-
-  </div>
-
-  <!-- What I Do -->
-  <div class="section">
-    <h2>What I Do</h2>
-    <ul>
-      <li>Create high-retention short-form and long-form videos</li>
-      <li>Write scripts with strong hooks that keep viewers watching until the end</li>
-      <li>Use visual storytelling, engaging subtitles and b-roll to reinforce key ideas</li>
-      <li>Colour grade video and turn raw footage into a consistent style</li>
-      <li>Select fonts, colours and positioning to create recognisable branding</li>
-    </ul>
-  </div>
-
 </body>
 </html>
