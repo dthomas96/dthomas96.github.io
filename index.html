@@ -63,25 +63,50 @@
 
     a {
       color: #fff;
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     .work-item {
       margin-bottom: 30px;
     }
 
+    /* Link styling */
     .work-title {
       display: inline-block;
-      text-decoration: none;
+      position: relative;
       color: #fff;
       font-size: 22px;
-      margin-bottom: 2px;
       font-weight: 600;
+      cursor: pointer;
       transition: color 0.2s ease;
     }
 
+    /* Arrow icon */
+    .work-title::before {
+      content: "↗ ";
+      font-size: 0.8em;
+      opacity: 0.6;
+    }
+
+    /* Underline (hidden initially) */
+    .work-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0%;
+      height: 1px;
+      background: #E5F4E3;
+      transition: width 0.25s ease;
+    }
+
+    /* Hover state */
     .work-title:hover {
       color: #E5F4E3;
+    }
+
+    .work-title:hover::after {
+      width: 100%;
     }
 
     .work-sub {
