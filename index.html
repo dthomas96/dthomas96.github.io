@@ -5,7 +5,7 @@
   <title>Dylan Thomas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Sans-serif heading font -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -20,7 +20,7 @@
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.6;
       color: #fff;
-      background-color: transparent;
+      background: transparent;
       position: relative;
       overflow-x: hidden;
     }
@@ -32,7 +32,6 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      display: block;
       background: #000;
     }
 
@@ -140,7 +139,7 @@
 
       <div class="work-item">
         <div class="work-title">Johanniter</div>
-        <div class="work-sub">Long-form instructional videos for emergency workers. These videos were produced in German and required working with a team in a different language.</div>
+        <div class="work-sub">Long-form instructional videos for emergency workers.</div>
         <video controls>
           <source src="videos/johanniter.mp4" type="video/mp4">
         </video>
@@ -148,7 +147,7 @@
 
       <div class="work-item">
         <div class="work-title">Daylight Computer</div>
-        <div class="work-sub">Short-form content focused on tech and health topics, promoting the Daylight Computer.</div>
+        <div class="work-sub">Short-form content focused on tech and health topics.</div>
         <video controls>
           <source src="videos/daylight_interviews.mp4" type="video/mp4">
         </video>
@@ -175,10 +174,10 @@
       <h2>What I Do</h2>
       <ul>
         <li>Create high-retention short-form and long-form videos</li>
-        <li>Write scripts with strong hooks that keep viewers watching until the end</li>
-        <li>Use visual storytelling, engaging subtitles and b-roll to reinforce key ideas</li>
-        <li>Colour grade video and turn raw footage into a consistent style</li>
-        <li>Select fonts, colours and positioning to create recognisable branding</li>
+        <li>Write scripts with strong hooks</li>
+        <li>Use visual storytelling and subtitles</li>
+        <li>Colour grade and build consistent style</li>
+        <li>Create recognisable branding</li>
       </ul>
     </div>
   </div>
@@ -189,52 +188,39 @@
       particlesJS("particles-js", {
         particles: {
           number: {
-            value: 70,
-            density: {
-              enable: true,
-              value_area: 1000
-            }
+            value: 35,
+            density: { enable: true, value_area: 1400 }
           },
-          color: {
-            value: "#ffffff"
-          },
-          shape: {
-            type: "circle"
-          },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
           opacity: {
-            value: 0.15,
-            random: false
+            value: 0.12,
+            random: true
           },
           size: {
-            value: 4,
+            value: 2.5,
             random: true
           },
           line_linked: {
             enable: true,
-            distance: 170,
+            distance: 150,
             color: "#ffffff",
-            opacity: 0.8,
-            width: 1.2
+            opacity: 0.05,
+            width: 1
           },
           move: {
             enable: true,
-            speed: 0.8,
+            speed: 0.4,
             direction: "none",
             random: false,
             straight: false,
-            out_mode: "out",
-            bounce: false
+            out_mode: "out"
           }
         },
         interactivity: {
-          detect_on: "canvas",
           events: {
-            onhover: {
-              enable: false
-            },
-            onclick: {
-              enable: false
-            },
+            onhover: { enable: false },
+            onclick: { enable: false },
             resize: true
           }
         },
