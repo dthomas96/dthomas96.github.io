@@ -25,11 +25,9 @@
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.6;
       color: #fff;
-
       background: linear-gradient(270deg, #000000, #0a0a0a, #141414, #0a0a0a);
       background-size: 400% 400%;
       animation: gradientShift 25s ease infinite;
-
       overflow-x: hidden;
     }
 
@@ -70,37 +68,34 @@
       margin-bottom: 30px;
     }
 
-    /* Link styling */
     .work-title {
       display: inline-block;
       position: relative;
       color: #fff;
       font-size: 22px;
       font-weight: 600;
+      line-height: 1;
       cursor: pointer;
       transition: color 0.2s ease;
     }
 
-    /* Arrow icon */
     .work-title::before {
       content: "↗ ";
       font-size: 0.8em;
       opacity: 0.6;
     }
 
-    /* Underline (hidden initially) */
     .work-title::after {
       content: "";
       position: absolute;
       left: 0;
-      bottom: -0.5px;
+      bottom: 0;
       width: 0%;
       height: 1px;
       background: #E5F4E3;
       transition: width 0.25s ease;
     }
 
-    /* Hover state */
     .work-title:hover {
       color: #E5F4E3;
     }
@@ -130,9 +125,7 @@
 </head>
 
 <body>
-
   <div class="page">
-
     <div style="display: flex; align-items: center; gap: 20px;">
       <div>
         <h1 style="margin: 0;">Dylan Thomas</h1>
@@ -158,10 +151,10 @@
     <div class="section">
       <h2>What I Do</h2>
       <ul>
-    <li>Select and structure the strongest moments to maximise retention</li>
-    <li>Edit pacing, cuts, and timing to keep viewers engaged</li>
-    <li>Apply subtitles, fonts, and visual styling for clarity and brand identity</li>
-    <li>Incorporate b-roll and visual elements to reinforce key ideas</li>
+        <li>Select and structure the strongest moments to maximise retention</li>
+        <li>Edit pacing, cuts, and timing to keep viewers engaged</li>
+        <li>Apply subtitles, fonts, and visual styling for clarity and brand identity</li>
+        <li>Incorporate b-roll and visual elements to reinforce key ideas</li>
       </ul>
     </div>
 
@@ -207,10 +200,7 @@
           <source src="videos/minuteman.mp4" type="video/mp4">
         </video>
       </div>
-
     </div>
-
   </div>
-
 </body>
 </html>
