@@ -46,11 +46,7 @@
     .sidebar {
       position: sticky;
       top: 40px;
-        line-height: 1.35; /* add this */
-}
-
-.what-i-do li {
-  margin-bottom: 5px; /* tighten spacing */
+      line-height: 1.35;
     }
 
     h1, h2, .work-title {
@@ -69,7 +65,7 @@
     h2 {
       font-size: 18px;
       line-height: 1;
-      margin: 28px 0 12px;
+      margin: 24px 0 10px;
     }
 
     p {
@@ -84,11 +80,6 @@
     .role {
       color: #cfcfcf;
       margin-bottom: 22px;
-    }
-
-    .intro {
-      color: #d8d8d8;
-      max-width: 28ch;
     }
 
     .contact-link {
@@ -108,7 +99,7 @@
     }
 
     .what-i-do li {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     .main h2 {
@@ -164,10 +155,21 @@
       max-width: 60ch;
     }
 
-    video {
+    .video-wrapper {
       width: 100%;
-      display: block;
       background: #000;
+      overflow: hidden;
+      border-radius: 6px;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: auto;
+      max-height: 78vh;
+      display: block;
+      margin: 0 auto;
+      background: #000;
+      object-fit: contain;
     }
 
     @media (max-width: 900px) {
@@ -178,10 +180,6 @@
 
       .sidebar {
         position: static;
-      }
-
-      .intro {
-        max-width: none;
       }
     }
 
@@ -233,9 +231,11 @@
             Daylight Computer
           </a>
           <div class="work-sub">Short-form content focused on tech and health topics.</div>
-          <video controls>
-            <source src="videos/daylight_interviews.mp4" type="video/mp4">
-          </video>
+          <div class="video-wrapper">
+            <video controls muted playsinline preload="metadata">
+              <source src="videos/daylight_interviews.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
 
         <div class="work-item">
@@ -243,9 +243,11 @@
             Tristan Scott
           </a>
           <div class="work-sub">Viral influencer content reaching hundreds of thousands of views.</div>
-          <video controls>
-            <source src="videos/tristan_scott.mp4" type="video/mp4">
-          </video>
+          <div class="video-wrapper">
+            <video controls muted playsinline preload="metadata">
+              <source src="videos/tristan_scott.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
 
         <div class="work-item">
@@ -253,9 +255,11 @@
             Johanniter
           </a>
           <div class="work-sub">Long-form instructional videos for emergency workers.</div>
-          <video controls>
-            <source src="videos/johanniter.mp4" type="video/mp4">
-          </video>
+          <div class="video-wrapper">
+            <video controls muted playsinline preload="metadata">
+              <source src="videos/johanniter.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
 
         <div class="work-item">
@@ -263,9 +267,11 @@
             Statecraft Systems LLC
           </a>
           <div class="work-sub">Long-form promotional videos for self-development conferences.</div>
-          <video controls>
-            <source src="videos/minuteman.mp4" type="video/mp4">
-          </video>
+          <div class="video-wrapper">
+            <video controls muted playsinline preload="metadata">
+              <source src="videos/minuteman.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
       </main>
 
